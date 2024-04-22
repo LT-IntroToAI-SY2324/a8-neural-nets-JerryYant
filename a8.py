@@ -15,3 +15,5 @@ xor_nn.train(xor_data, iters=1000, print_interval=100)
 print(xor_nn.test_with_expected(xor_data))
 
 print("<<<<<<<<<<<<<< Voter Data >>>>>>>>>>>>>>\n")
+
+#
