@@ -10,13 +10,35 @@ xor_data = [
 ]
 
 xor_nn = NeuralNet(2, 2, 1)
-xor_nn.train(xor_data, iters=1000, print_interval=100)
+#xor_nn.train(xor_data, iters=1000, print_interval=100)
 
 print(xor_nn.test_with_expected(xor_data))
 
 print("<<<<<<<<<<<<<< Voter Data >>>>>>>>>>>>>>\n")
 
 voter_data = [
-    {[.9, .6, .8, .3, .1], [1,0]},
+    ([.9, .6, .8, .3, .1], [1.0]),
+    ([.8, .8, .4, .6, .4], [1.0]),
+    ([.7, .2, .4, .6, .3], [1.0]),
+    ([.5, .5, .8, .4, .8], [0.0]),
+    ([.3, .1, .6, .8, .8], [0.0]),
+    ([.6, .3, .4, .3, .6], [0.0])
+
     
 ]
+
+voter_nn = NeuralNet(5, 1, 1)
+
+print(voter_nn.train(voter_data))
+
+voter_test = [
+    [1, 1, 1, .1, .1],
+    [.5, .2, .1, .7, .7],
+    [.8, .3, .3, .3, .8],
+    [.8, .3, .3, .8, .3],
+    [.0, .8, .8, .3, .6]
+]
+
+print("voter test")
+
+print(voter_nn.test(voter_test))
