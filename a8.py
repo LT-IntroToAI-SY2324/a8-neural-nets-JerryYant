@@ -3,10 +3,10 @@ from neural import NeuralNet
 print("<<<<<<<<<<<<<< XOR >>>>>>>>>>>>>>\n")
 
 xor_data = [
-    [(0, 0), (0)],
-    [(1, 0), (1)],
-    [(0, 1), (1)],
-    [(0, 0), (0)]
+    ([0, 0], [0]),
+    ([1, 0], [1]),
+    ([0, 1], [1]),
+    ([0, 0], [0])
 ]
 
 xor_nn = NeuralNet(2, 2, 1)
@@ -16,4 +16,7 @@ print(xor_nn.test_with_expected(xor_data))
 
 print("<<<<<<<<<<<<<< Voter Data >>>>>>>>>>>>>>\n")
 
-#
+voter_data = [
+    {[.9, .6, .8, .3, .1], [1,0]},
+    
+]
